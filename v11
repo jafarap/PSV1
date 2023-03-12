@@ -1,0 +1,171 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <title>Signup - DOH Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/Content/font-awesome.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/Content/styles.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/Content/media.css" media="screen" />
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="headerGrid">
+        <div class="wrapper">
+            <a href="#" id="haadLogo" class="fr">
+                
+            </a>
+            <a href="#" id="dfLogo" class="fl">
+                <img src="/Images/df-logo.png" alt="">
+            </a>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="centerGrid midLayout">
+            <!-- Register grid -->
+            <div id="registraionGrid">
+                <div id="login" class="whiteBg">
+                    <h2 class="ac">Registration</h2>
+                    <div class="contentGrid iconPad" style="background:#fff;">
+                        <fieldset>
+
+
+                            <span style="color:green; line-height: 25px;"></span>
+                        </fieldset>
+<form action="/Account/Signup" id="frmLogin" method="post">                        <fieldset id="TextUIN" style="display:none;">
+                            <span style="display: block; margin: 0 0 10px; font-size: 11px;"><strong style="color:red;">NOTE : </strong> FROM THE <strong style="color:red;">5th JUNE</strong>, YOU ARE EXPECTED TO CREATE A NEW UIN NUMBER ON THE DOH PORTAL BEFORE CONTINUING BY <a href="https://bpmweb.doh.gov.ae/usermanagement/Login.aspx?Home=1" target="_blank" style="color:blue; text-decoration:underline;">CLICKING HERE</a>.</span>
+                        </fieldset>
+                            <fieldset>
+                                <div class="loginAsa">
+                                    <div class="col1"><strong>Signup as a :</strong></div>
+
+                                    <div class="col1">
+                                        <input data-val="true" data-val-required="Role Type is required." id="applicant" name="RoleCode" type="radio" value="APP" />
+                                        <label for="applicant">Applicant</label>
+                                    </div>
+                                    <div class="col1">
+                                        <input id="facilitate" name="RoleCode" type="radio" value="FAC" />
+                                        <label for="facilitate">Facility</label>
+                                    </div>
+                                    <div class="col1">
+                                        <span class="field-validation-valid" data-valmsg-for="RoleCode" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <label class="labelText">Email ID</label>
+                                <div class="inputBox">
+                                    <i class="fa fa-key"></i>
+                                    <input class="inputText" data-val="true" data-val-email="Please enter valid Email ID" data-val-length="The field EmailId must be a string with a maximum length of 100." data-val-length-max="100" data-val-required="Email ID is required." id="EmailId" maxlength="100" name="EmailId" type="text" value="" />
+                                    <span class="field-validation-valid" data-valmsg-for="EmailId" data-valmsg-replace="true"></span>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <label class="labelText fl">Confirm Email ID</label>
+                                <div class="inputBox">
+                                    <i class="fa fa-key"></i>
+                                    <input class="inputText" data-val="true" data-val-email="Please enter valid Email ID" data-val-equalto="Confirm Email ID mismatch" data-val-equalto-other="*.EmailId" data-val-length="The field ConfirmEmailId must be a string with a maximum length of 100." data-val-length-max="100" data-val-required="Confirm Email ID is required." id="ConfirmEmailId" maxlength="100" name="ConfirmEmailId" onPaste="return false;" type="text" value="" />
+                                    <span class="field-validation-valid" data-valmsg-for="ConfirmEmailId" data-valmsg-replace="true"></span>
+                                </div>
+                            </fieldset>
+                            <fieldset id="divCRN" style="display:none">
+                                
+                                <div style="display: flex; justify-content: space-between;">
+                                    <div class="nw-tooltip">
+                                        <span class="nw-tooltiptext">Fill your Unique Identification Number (UIN) available from your TAMM portal account</span>
+                                        <label class="labelText fl">Unique Identification Number (UIN) available from your TAMM portal account</label>
+                                    </div>
+
+                                    
+                                    
+                                </div>
+                                <div class="inputBox nw-tooltip">
+                                    <span class="nw-tooltiptext" style="left:0;">Fill your Unique Identification Number (UIN) available from your TAMM portal account</span>
+                                    <i class="fa fa-key"></i>
+                                    <input class="inputText" data-val="true" data-val-length="The field CRN must be a string with a maximum length of 50." data-val-length-max="50" data-val-required="Unique Identity Number is required." id="CRN" maxlength="100" name="CRN" type="text" value="" />
+                                    <span class="field-validation-valid" data-valmsg-for="CRN" data-valmsg-replace="true"></span>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <div class="DisclaimersGrid inputGrid">
+                                    
+                                    <a style="text-decoration:underline!important" href="https://corp.dataflowgroup.com/general-applicant-privacy-policy/" target="_blank">Disclaimer </a> <input data-val="true" data-val-range="Disclaimer is required." data-val-range-max="True" data-val-range-min="True" data-val-required="The Disclamer field is required." id="Disclamer" name="Disclamer" type="checkbox" value="true" /><input name="Disclamer" type="hidden" value="false" />  I agree
+
+                                    <p>  <span class="field-validation-valid" data-valmsg-for="Disclamer" data-valmsg-replace="true"></span></p>
+
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <p class="notes">An email will be sent to you containing the login credentials to proceed with the application. If you still have not received the email, please check in your junk/spam folder. If there is still no email, <a href="/Account/ResendPassword">click here</a> after 5 minutes.</p>
+                            </fieldset>
+                            <fieldset>
+                                <input type="submit" class="btn btnPink" value="REGISTER">
+                                <div class="fr remember">
+                                    <i class="fa fa-sign-in"></i>
+                                    <a href="/">Login here</a>
+                                </div>
+                            </fieldset>
+</form>                    </div>
+                </div>
+                <img src="/Images/shadow-2.png" alt="" class="boxShadow">
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script src="/Scripts/jquery-1.8.2.min.js"></script>
+<script src="/Scripts/jquery-ui-1.8.24.js"></script>
+<script src="/Scripts/jquery.validate.js"></script>
+<script src="/Scripts/jquery.validate.unobtrusive.js"></script>
+<script src="/Scripts/ProjectFile/CustomJQuery.js"></script>
+<script type="text/javascript">
+    $('#RoleCode').val('');
+    $('#ConfirmEmailId').val('');
+    $('#EmailId').val('');
+    $('#CRN').val('');
+    $('input[type=checkbox]:checked').attr('checked', false);
+    var URL = "Account/Signup?RoleCode=APP";
+    LoginDivShowHide();
+
+    var defaultRangeValidator = $.validator.methods.range;
+    $.validator.methods.range = function (value, element, param) {
+        if (element.type === 'checkbox') {
+            // if it's a checkbox return true if it is checked
+            return element.checked;
+        } else {
+            // otherwise run the default validation function
+            return defaultRangeValidator.call(this, value, element, param);
+        }
+    }
+
+    $(document).ready(function () {
+        if ($("input[name='RoleCode']:checked").val() == "APP") {
+            $('#divCRN').css("display", "block");
+        }
+        $("#applicant").click(function () {
+            $(".disabled").css("opacity", "1.0");
+            $(".disabled").css('pointer-events', 'auto');
+            $(".disabled").css("cursor", "pointer");
+            $('#divCRN').css("display", "block");
+           // $("#TextUIN").css("display", "block");
+
+        });
+
+        $("#facilitate").click(function () {
+            $(".disabled").css("opacity", "0.6");
+            $(".disabled").css("pointer-events", "none");
+            $(".disabled").css("cursor", "default");
+            $('#divCRN').css("display", "none");
+            $('#CRN').val('');
+           // $("#TextUIN").css("display", "none");
+        });
+    });
+
+
+</script>
